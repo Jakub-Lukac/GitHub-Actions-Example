@@ -1,0 +1,15 @@
+name: Workflow Dispatch Environment Input Example
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "The environemnt to deploy to"
+        required: true
+        type: environment # recognizes the github repo or organization level environments
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deployed to ${{ github.event.inputs.environment }} environment."

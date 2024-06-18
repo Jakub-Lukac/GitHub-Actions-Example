@@ -7,7 +7,7 @@ on:
         description: "The environemnt to deploy to"
         required: true
         default: "production"
-        type: choice
+        type: choice # creates drop down menu
         options: ["production", "qa", "dev"]
         # options:
         #   - production
